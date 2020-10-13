@@ -8,9 +8,13 @@ env:
     - PIPENV_IGNORE_VIRTUALENVS=1
 
 install:
+  - cp contrib/env-sample .env
   - pip install pipenv
   - pipenv sync --dev
 
 script:
   - pipenv run flake8 .
-  - pipenv run pytest
+  - pipenv run pytest --cov=pypro
+
+after_success:
+  - pipenv run codecov
