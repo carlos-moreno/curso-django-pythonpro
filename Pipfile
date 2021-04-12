@@ -17,6 +17,9 @@ psycopg2-binary = "*"
 pytest-django = "*"
 django-debug-toolbar = "*"
 sentry-sdk = "*"
+django-s3-folder-storage = "*"
+boto3 = "*"
+django-storages = "*"
 
 [requires]
 python_version = "3.8"
